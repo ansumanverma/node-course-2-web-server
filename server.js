@@ -45,6 +45,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('project.hbs',{
+        pageTitle: 'Project Page',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to show page'
@@ -52,5 +58,5 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}`);
+    console.log(`node sServer is up on port ${port}`);
 });
